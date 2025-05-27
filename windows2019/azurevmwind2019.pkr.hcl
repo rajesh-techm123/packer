@@ -22,15 +22,15 @@ source "azure-arm" "windowsimage-2019" {
   winrm_username  = "packer"
   temp_compute_name = "win2019-vm-poc"
   temp_nic_name     = "win2019-nic-poc"
-  build_resource_group_name = "Test_VM"
+  build_resource_group_name = "rg-packer-acg"
   temp_os_disk_name  = "win2019-osdisk-poc"
   
 
   #Define the network 
-  virtual_network_resource_group_name = "Test_VM"
-  virtual_network_name                = "v-network"
-  virtual_network_subnet_name         = "subnet1"
-  shared_gallery_image_version_end_of_life_date = "2025-03-03T20:00:05.99Z"
+  virtual_network_resource_group_name = "rg-packer-acg"
+  virtual_network_name                = "Packerpoc-vnet"
+  virtual_network_subnet_name         = "default"
+  #shared_gallery_image_version_end_of_life_date = "2025-03-03T20:00:05.99Z"
   #shared_gallery_image_version_exclude_from_latest  = true
 
 
@@ -40,7 +40,7 @@ source "azure-arm" "windowsimage-2019" {
     gallery_name   = "AzurepackerImages"
     image_name     = "win2019dcx64"
     #image_version  = "${formatdate("YYYY.MMDD.hhmm", timestamp())}"
-    image_version  = "2.0.0"
+    image_version  = "1.0.0"
     resource_group = "rg-packer-acg"
   }
 }
