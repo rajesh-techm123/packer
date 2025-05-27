@@ -17,7 +17,7 @@ source "azure-arm" "windowsimage-2019" {
   vm_size         = "Standard_D2s_v3"
   communicator    = "winrm"
   winrm_use_ssl   = true
-  winrm_timeout   = "10m"
+  winrm_timeout   = "2m"
   winrm_insecure  = true
   winrm_username  = "packer"
   temp_compute_name = "win2019-vm-poc"
