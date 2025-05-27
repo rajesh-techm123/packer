@@ -24,6 +24,7 @@ source "azure-arm" "windowsimage-2019" {
   temp_nic_name     = "win2019-nic-poc"
   build_resource_group_name = "test-aib-rg"
   temp_os_disk_name  = "win2019-osdisk-poc"
+  skip_create_build_key_vault = true
 
   
 
