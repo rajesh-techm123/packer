@@ -22,7 +22,7 @@ source "azure-arm" "windowsimage-2019" {
   winrm_username  = "packer"
   temp_compute_name = "win2019-vm-poc"
   temp_nic_name     = "win2019-nic-poc"
-  build_resource_group_name = "rg-packer-acg"
+  build_resource_group_name = "test-aib-rg"
   temp_os_disk_name  = "win2019-osdisk-poc"
   
 
